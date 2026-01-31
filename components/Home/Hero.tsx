@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import DotGrid from "@/components/DotGrid";
+import DotGrid from "@/components/Home/DotGrid";
 
 const Hero = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<section className='relative min-h-screen py-5 px-2 flex items-center justify-center bg-background text-foreground'>
+		<section className='relative min-h-svh [@media(max-width:330px)]:pt-25 [@media(max-width:330px)]:pb-5 py-5 px-2 flex items-center justify-center bg-background text-foreground'>
 			<div className='absolute inset-0 z-1'>
 				<DotGrid
 					dotSize={5}
@@ -28,7 +28,7 @@ const Hero = () => {
 			{/* Huge background name - outline style */}
 			<div className='absolute inset-0 z-2 flex items-center justify-center overflow-hidden'>
 				<h2
-					className={`text-[10rem] md:text-[15vw] lg:text-[20vw] font-bold tracking-tighter leading-none text-transparent text-center transition-all duration-1000 ${
+					className={`text-[10rem] md:text-[15vw] lg:text-[20vw] font-bold tracking-tighter leading-none text-transparent text-center transition-all duration-1000 pointer-events-none ${
 						isVisible
 							? "opacity-100 scale-100 animate-[strokePulse_8s_ease-in-out_infinite]"
 							: "opacity-0 scale-95"
@@ -54,7 +54,6 @@ const Hero = () => {
 					</div>
 				</div>
 
-				{/* Value statement */}
 				<h1
 					className={`text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-6 leading-tight transition-all duration-1000 delay-500 ${
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -64,7 +63,6 @@ const Hero = () => {
 					for complex problems
 				</h1>
 
-				{/* Supporting text */}
 				<p
 					className={`text-sm md:text-lg text-gray-400 max-w-2xl mx-auto mb-9 md:mb-12 transition-all duration-1000 delay-700 ${
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -79,7 +77,7 @@ const Hero = () => {
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}>
 					<button className='cursor-pointer group px-6 py-3 rounded-full bg-white border-2 text-black font-semibold capitalize tracking-normal text-[10px] md:text-xs transition-all duration-500 ease-in-out hover:bg-gray-200 relative overflow-hidden active:scale-95'>
-						<span className='relative z-10'>View My Work</span>
+						<span className='relative z-10'>View my Work</span>
 						<div className='absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000' />
 					</button>
 
@@ -107,14 +105,13 @@ const Hero = () => {
 
 			{/* Scroll indicator */}
 			<div
-				className={`[@media(max-width:340px)]:hidden absolute z-3 bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-1000 ${
+				className={`[@media(max-width:330px)]:hidden absolute z-3 bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-1000 ${
 					isVisible ? "opacity-100" : "opacity-0"
 				}`}>
 				<div className='w-5 h-9 border border-white/20 rounded-full flex justify-center p-1'>
-					{/* The "Wheel" animating down */}
 					<div className='w-1 h-1 bg-white rounded-full animate-mouse-wheel' />
 				</div>
-				<span className='text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-gray-600'>
+				<span className='text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-gray-600 animate-pulse'>
 					Scroll to Explore
 				</span>
 			</div>

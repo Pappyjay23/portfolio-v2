@@ -123,7 +123,9 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
 					stroke-width='5'
 				/>
 			</svg>
-			<p className='subtitle -mt-4 md:mt-0 font-medium'>Frontend Engineer</p>
+			<p className='subtitle -mt-2 md:mt-0 font-medium text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/60'>
+				Frontend Engineer
+			</p>
 		</div>
 	);
 };
