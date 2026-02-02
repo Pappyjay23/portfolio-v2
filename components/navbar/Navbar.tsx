@@ -115,23 +115,34 @@ const Navbar = () => {
 		? "transition-all duration-1000 ease-out"
 		: "transition-none";
 
+	const handleBack = () => {
+		const currentDomain = window.location.origin;
+		const isInternalNavigation = document.referrer.startsWith(currentDomain);
+
+		if (isInternalNavigation) {
+			router.back();
+		} else {
+			router.push("/");
+		}
+	};
+
 	if (!isHome) {
 		return (
 			<nav
 				key='sub-nav'
-				className={`w-full flex justify-between items-center px-6 md:px-12 mix-blend-difference ${transitionClass} ${
+				className={`w-full flex justify-between items-center px-6 md:px-12 ${transitionClass} ${
 					isVisible ? "opacity-100" : "opacity-0"
 				}`}>
 				<button
-					onClick={() => router.back()}
-					className='group flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground cursor-pointer'>
+					onClick={handleBack}
+					className='group flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground cursor-pointer backdrop-blur-md bg-background/5 p-1 rounded-full shadow-background/30 shadow-xs'>
 					<span className='w-8 h-px bg-foreground transition-all duration-500 group-hover:w-12' />
 					Go Back
 				</button>
 
 				<a
 					href={CONTACT_HREF}
-					className='px-3 md:px-4 py-0.5 md:py-1.5 bg-foreground outline-0 border-0 text-black rounded-full font-bold transition-all duration-300 hover:bg-gray-200 active:scale-95 items-center justify-center flex gap-1'>
+					className='px-3 md:px-4 py-0.5 md:py-1.5 bg-foreground outline-0 border-0 text-black rounded-full font-bold transition-all duration-300 hover:bg-gray-200 active:scale-95 items-center justify-center flex gap-1 shadow-background/30 shadow-xs'>
 					<span className='text-xs mt-0.5'>Reach out</span>
 					<span className='animate-wave text-xl -mt-0.5'>👋</span>
 				</a>

@@ -38,7 +38,7 @@ export default function SmoothScrollProvider({
 			smoothTouch: isTouch ? 1.2 : 0.6,
 			speed: isTouch ? 0.9 : 1,
 			effects: true,
-			ignoreMobileResize: false,
+			ignoreMobileResize: true,
 			normalizeScroll: true,
 		});
 
@@ -51,11 +51,14 @@ export default function SmoothScrollProvider({
 	useEffect(() => {
 		const smoother = ScrollSmoother.get();
 		if (smoother) {
+			gsap.set(window, { scrollTo: 0 });
 			smoother.scrollTop(0);
-			// Give the browser 100ms to settle the height before refreshing
-			setTimeout(() => {
+
+			const timer = setTimeout(() => {
 				ScrollTrigger.refresh();
-			}, 100);
+			}, 200);
+
+			return () => clearTimeout(timer);
 		}
 	}, [pathname]);
 

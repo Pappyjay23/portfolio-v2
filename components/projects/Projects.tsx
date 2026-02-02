@@ -1,50 +1,18 @@
 "use client";
 
 import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { PROJECTS } from "@/lib/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
-const projects = [
-	{
-		title: "OrbitDesk",
-		description: "Global work command center for cross-border workflows.",
-		category: "Product / PWA",
-		image: "/orbitdesk.jpg",
-		tech: ["React.js", "Typescript", "Supabase", "PWA", "TailwindCss", "Axios"],
-		link: "https://orbit-desk-vp.vercel.app",
-	},
-	{
-		title: "Cinera",
-		description: "Motion-driven premium movie discovery experience.",
-		category: "Entertainment / GSAP",
-		image: "/cinera.jpg",
-		tech: [
-			"React.js",
-			"Typescript",
-			"Supabase",
-			"GSAP",
-			"TailwindCss",
-			"TanStack Query",
-			"Axios",
-			"PWA",
-		],
-		link: "https://cinera-vp.vercel.app",
-	},
-	{
-		title: "Halo",
-		description: "Immersive 3D landing experience for luxury audio.",
-		category: "3D / Interactive",
-		image: "/halo.jpg",
-		tech: ["Next.js", "Typescript", "Three.js", "GSAP", "TailwindCss"],
-		link: "https://halo-vp.vercel.app",
-	},
-];
-
 const Projects = () => {
+	const router = useRouter();
+
 	const sectionRef = useRef(null);
 	const headerRef = useRef(null);
 
@@ -102,7 +70,7 @@ const Projects = () => {
 				{/* Header */}
 				<div
 					ref={headerRef}
-					className='flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8'>
+					className='flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4 md:gap-8'>
 					<div className='space-y-4'>
 						<div className='flex items-center gap-2'>
 							<div className='w-2 h-2 rounded-full bg-foreground animate-pulse' />
@@ -110,7 +78,7 @@ const Projects = () => {
 								Selected Works
 							</span>
 						</div>
-						<h2 className='text-5xl lg:text-6xl font-medium tracking-tight leading-none'>
+						<h2 className='text-4xl lg:text-6xl font-medium tracking-tight leading-none'>
 							Projects <br /> & Case Studies
 						</h2>
 					</div>
@@ -122,13 +90,19 @@ const Projects = () => {
 
 				{/* The Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16'>
-					{projects.map((project, index) => (
-						<Link
-							href={`/projects/${project.title.toLowerCase()}`}
+					{PROJECTS.slice(0, 3).map((project, index) => (
+						<div
+							onClick={() =>
+								router.push(`/projects/${project.title.toLowerCase()}`)
+							}
 							key={index}
 							className='project-card group cursor-pointer'>
 							{/* Image Container */}
-							<div className='relative aspect-square w-full overflow-hidden bg-gray-100 rounded-[25px] mb-6'>
+							<div className='relative aspect-square w-full overflow-hidden bg-foreground/5 rounded-[25px] mb-6'>
+								<div
+									className='absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shimmer'
+									style={{ backgroundSize: "200% 100%" }}
+								/>
 								<Image
 									src={project.image}
 									alt={project.title}
@@ -177,7 +151,7 @@ const Projects = () => {
 									))}
 								</div>
 							</div>
-						</Link>
+						</div>
 					))}
 				</div>
 
