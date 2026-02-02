@@ -17,7 +17,7 @@ const navItemsList = [
 				src='/profile.jpg'
 				alt='Profile'
 				fill
-				className='object-cover object-top scale-[1.2] group-hover:scale-[1.4] transition-all duration-500 ease-in-out'
+				className='object-cover object-top scale-[1.2] group-hover:scale-[1.4] border-0 outline-none rounded-full transition-all duration-500 ease-in-out'
 			/>
 		),
 		label: "Home",
