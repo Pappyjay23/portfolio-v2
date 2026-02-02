@@ -1,22 +1,26 @@
 "use client";
 
-import { useState } from "react";
 import Loader from "@/components/Loader";
-import Hero from "@/components/Home/Hero";
-import Navbar from "@/components/Navbar/Navbar";
+import Hero from "@/components/home/Hero";
+import Projects from "@/components/projects/Projects";
+import { globalState } from "@/lib/utils";
+import { useState } from "react";
 
 const Home = () => {
-	const [showContent, setShowContent] = useState(false);
+	const [showContent, setShowContent] = useState(globalState.hasPlayedIntro);
+
+	const handleLoadComplete = () => {
+		globalState.hasPlayedIntro = true;
+		setShowContent(true);
+	};
 
 	return (
 		<>
-			{!showContent && <Loader onLoadComplete={() => setShowContent(true)} />}
+			{!showContent && <Loader onLoadComplete={handleLoadComplete} />}
 			{showContent && (
 				<main className='min-h-svh relative'>
-					<div className='fixed top-0 left-0 w-full z-50 py-4 flex justify-center'>
-						<Navbar />
-					</div>
 					<Hero />
+					<Projects />
 					{/* Add more sections here */}
 				</main>
 			)}

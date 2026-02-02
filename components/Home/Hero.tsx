@@ -1,7 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import DotGrid from "@/components/Home/DotGrid";
+import DotGrid from "@/components/home/DotGrid";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { handleScroll } from "@/lib/utils";
+import { CONTACT_HREF } from "@/lib/constants";
 
 const Hero = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -10,8 +13,11 @@ const Hero = () => {
 		setTimeout(() => setIsVisible(true), 100);
 	}, []);
 
+	useScrollSpy("hero");
 	return (
-		<section className='relative min-h-svh [@media(max-width:330px)]:pt-25 [@media(max-width:330px)]:pb-5 py-5 px-2 flex items-center justify-center bg-background text-foreground'>
+		<section
+			id='hero'
+			className='relative min-h-svh [@media(max-width:330px)]:pt-25 [@media(max-width:330px)]:pb-5 py-5 px-2 flex items-center justify-center bg-background text-foreground'>
 			<div className='absolute inset-0 z-1'>
 				<DotGrid
 					dotSize={5}
@@ -59,8 +65,7 @@ const Hero = () => {
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}>
 					Building elegant solutions
-					<br className='hidden md:block' />{" "}
-					for complex problems
+					<br className='hidden md:block' /> for complex problems
 				</h1>
 
 				<p
@@ -76,14 +81,18 @@ const Hero = () => {
 					className={`flex gap-4 justify-center items-center transition-all duration-1000 delay-900 ${
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}>
-					<button className='cursor-pointer group px-6 py-3 rounded-full bg-white border-2 text-black font-semibold capitalize tracking-normal text-[10px] md:text-xs transition-all duration-500 ease-in-out hover:bg-gray-200 relative overflow-hidden active:scale-95'>
+					<button
+						onClick={() => handleScroll("projects")}
+						className='cursor-pointer group px-6 py-3 rounded-full bg-white border-2 text-black font-semibold capitalize tracking-normal text-[10px] md:text-xs transition-all duration-500 ease-in-out hover:bg-gray-200 relative overflow-hidden active:scale-95'>
 						<span className='relative z-10'>View my Work</span>
 						<div className='absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000' />
 					</button>
 
-					<button className='cursor-pointer px-6 py-3 rounded-full border-2 border-white text-white font-semibold capitalize tracking-normal text-[10px] md:text-xs hover:bg-white hover:text-black transition-all duration-500 ease-in-out active:scale-95'>
+					<a
+						href={CONTACT_HREF}
+						className='cursor-pointer px-6 py-3 rounded-full border-2 border-white text-white font-semibold capitalize tracking-normal text-[10px] md:text-xs hover:bg-white hover:text-black transition-all duration-500 ease-in-out active:scale-95'>
 						Get In Touch
-					</button>
+					</a>
 				</div>
 
 				{/* Tech stack pills */}
