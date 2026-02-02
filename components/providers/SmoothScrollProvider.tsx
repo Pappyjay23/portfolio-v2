@@ -18,18 +18,28 @@ export default function SmoothScrollProvider({
 	const wrapperRef = useRef<HTMLDivElement>(null);
 	const contentRef = useRef<HTMLDivElement>(null);
 	const pathname = usePathname();
-	const isTouch = ScrollTrigger.isTouch === 1;
+	const isTouch =
+		typeof window !== "undefined" &&
+		(navigator.maxTouchPoints > 0 ||
+			"ontouchstart" in window ||
+			ScrollTrigger.isTouch);
 
 	useLayoutEffect(() => {
+		if (!wrapperRef.current || !contentRef.current) return;
+
+		const prev = ScrollSmoother.get();
+		if (prev) prev.kill();
+
 		// Initialize Smoother
 		const smoother = ScrollSmoother.create({
 			wrapper: wrapperRef.current,
 			content: contentRef.current,
-			// smooth: isTouch ? 0 : 2,
-			smooth: 2,
-			smoothTouch: 0.6,
-			effects: !isTouch,
-			ignoreMobileResize: true,
+			smooth: isTouch ? 1.2 : 1.6,
+			smoothTouch: isTouch ? 1.2 : 0.6,
+			speed: isTouch ? 0.9 : 1,
+			effects: true,
+			ignoreMobileResize: false,
+			normalizeScroll: true,
 		});
 
 		return () => {
