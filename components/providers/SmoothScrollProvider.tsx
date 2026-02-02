@@ -18,16 +18,16 @@ export default function SmoothScrollProvider({
 	const wrapperRef = useRef<HTMLDivElement>(null);
 	const contentRef = useRef<HTMLDivElement>(null);
 	const pathname = usePathname();
+	const isTouch = ScrollTrigger.isTouch === 1;
 
 	useLayoutEffect(() => {
 		// Initialize Smoother
 		const smoother = ScrollSmoother.create({
 			wrapper: wrapperRef.current,
 			content: contentRef.current,
-			smooth: 2,
-			effects: true,
-			normalizeScroll: { allowNestedScroll: true },
-			smoothTouch: 0.1,
+			smooth: isTouch ? 0 : 2,
+			smoothTouch: 0.6,
+			effects: !isTouch,
 			ignoreMobileResize: true,
 		});
 

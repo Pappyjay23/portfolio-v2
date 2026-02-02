@@ -13,12 +13,17 @@ export const globalState = {
 
 export const handleScroll = (to: string) => {
 	const smoother = ScrollSmoother.get();
-	if (smoother) {
-		smoother.paused(false);
-		
-		const target = `#${to}`;
-		if (document.querySelector(target)) {
-			smoother.scrollTo(target, true, "top 60px");
-		}
+	if (!smoother) return;
+
+	smoother.paused(false);
+
+	const target = `#${to}`;
+	if (document.querySelector(target)) {
+		smoother.scrollTo(target, true, "top 60px");
+
+		requestAnimationFrame(() => {
+			smoother.paused(false);
+			ScrollTrigger.refresh();
+		});
 	}
 };
