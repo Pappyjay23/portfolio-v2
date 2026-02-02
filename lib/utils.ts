@@ -14,6 +14,9 @@ export const globalState = {
 export const handleScroll = (to: string) => {
 	const smoother = ScrollSmoother.get();
 	if (smoother) {
-		smoother.scrollTo(`#${to}`, true, "top 0px");
+		const target = `#${to}`;
+		if (document.querySelector(target)) {
+			smoother.scrollTo(target, true, "top 60px");
+		}
 	}
 };

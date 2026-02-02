@@ -131,9 +131,9 @@ const Navbar = () => {
 
 				<a
 					href={CONTACT_HREF}
-					className='px-4 py-1.5 bg-foreground outline-0 border-0 text-black rounded-full font-bold transition-all duration-300 hover:bg-gray-200 active:scale-95 items-center gap-1 hidden md:flex'>
-					<span className='text-xs'>Reach out</span>
-					<span className='animate-wave text-xl'>👋</span>
+					className='px-3 md:px-4 py-0.5 md:py-1.5 bg-foreground outline-0 border-0 text-black rounded-full font-bold transition-all duration-300 hover:bg-gray-200 active:scale-95 items-center justify-center flex gap-1'>
+					<span className='text-xs mt-0.5'>Reach out</span>
+					<span className='animate-wave text-xl -mt-0.5'>👋</span>
 				</a>
 			</nav>
 		);

@@ -26,6 +26,8 @@ export default function SmoothScrollProvider({
 			content: contentRef.current,
 			smooth: 2,
 			effects: true,
+			normalizeScroll: true,
+			ignoreMobileResize: true,
 		});
 
 		return () => {
@@ -35,9 +37,14 @@ export default function SmoothScrollProvider({
 
 	// Recalculate page height on route change
 	useEffect(() => {
-		ScrollTrigger.refresh();
 		const smoother = ScrollSmoother.get();
-		if (smoother) smoother.scrollTop(0);
+		if (smoother) {
+			smoother.scrollTop(0);
+			// Give the browser 100ms to settle the height before refreshing
+			setTimeout(() => {
+				ScrollTrigger.refresh();
+			}, 100);
+		}
 	}, [pathname]);
 
 	return (
