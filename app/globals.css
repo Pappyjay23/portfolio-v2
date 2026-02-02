@@ -64,7 +64,8 @@ body {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
 	font-family: var(--font-urbanist);
-	scroll-behavior: smooth;
+	scroll-behavior: auto !important;
+	overscroll-behavior: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

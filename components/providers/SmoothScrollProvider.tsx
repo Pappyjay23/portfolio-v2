@@ -26,7 +26,8 @@ export default function SmoothScrollProvider({
 			content: contentRef.current,
 			smooth: 2,
 			effects: true,
-			normalizeScroll: true,
+			normalizeScroll: { allowNestedScroll: true },
+			smoothTouch: 0.1,
 			ignoreMobileResize: true,
 		});
 
