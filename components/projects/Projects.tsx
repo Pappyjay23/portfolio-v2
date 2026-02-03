@@ -65,7 +65,7 @@ const Projects = () => {
 		<section
 			ref={sectionRef}
 			id='projects'
-			className='bg-background text-foreground py-24 px-6 md:px-12'>
+			className='bg-background text-foreground py-12 px-6 md:px-12'>
 			<div className='max-w-300 mx-auto'>
 				{/* Header */}
 				<div

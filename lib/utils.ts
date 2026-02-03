@@ -29,6 +29,6 @@ export const handleScroll = (to: string) => {
     if (document.querySelector(target)) {
         ScrollTrigger.refresh(); 
         
-        smoother.scrollTo(target, true, "top 10px");
+        smoother.scrollTo(target, true, "top 50px");
     }
 };
