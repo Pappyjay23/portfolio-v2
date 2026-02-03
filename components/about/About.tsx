@@ -1,12 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
 	const sectionRef = useRef(null);
@@ -70,9 +68,9 @@ const About = () => {
 
 				{/* Right Column: Content */}
 				<div className='md:col-span-8 space-y-12'>
-					<h2 className='about-title text-3xl md:text-5xl lg:text-6xl font-medium tracking-tighter leading-[1.1]'>
+					<h2 className='about-title text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]'>
 						I bridge the gap between <br />
-						<span className='text-gray-500 italic mr-2'>
+						<span className='text-gray-500 mr-2'>
 							visionary design
 						</span>{" "}
 						and <br />
@@ -81,10 +79,10 @@ const About = () => {
 
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-13'>
 						<p className='about-paragraph text-gray-400 leading-relaxed text-xs md:text-sm font-light'>
-							With <strong>over four years of experience</strong> architecting
+							With <strong className="font-bold">over four years of experience</strong> architecting
 							production-ready applications, I specialize in bridging the gap
 							between visionary design and technical execution. My work centers
-							on <strong>functional aesthetics</strong>—crafting interfaces that
+							on <strong className="font-bold">functional aesthetics</strong>—crafting interfaces that
 							are as structurally sound as they are visually compelling. I
 							believe that elite engineering should be felt, not seen,
 							manifesting in fluid motion, accessible patterns, and
@@ -92,13 +90,13 @@ const About = () => {
 						</p>
 						<p className='about-paragraph text-gray-400 leading-relaxed text-xs md:text-sm font-light'>
 							Leveraging a deep expertise in{" "}
-							<strong>
+							<strong className="font-bold">
 								React, TypeScript, and modern animation primitives
 							</strong>
 							, I transform complex requirements into intuitive digital
 							experiences. From high-performance task management systems to
 							immersive 3D storytelling, I maintain a
-							<strong> meticulous eye for detail</strong> that ensures design
+							<strong className="font-bold"> meticulous eye for detail</strong> that ensures design
 							systems are translated into clean, maintainable code—honoring the
 							intent of every pixel while optimizing for real-world performance.
 						</p>

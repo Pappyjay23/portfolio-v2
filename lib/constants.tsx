@@ -1,3 +1,25 @@
+import { DiJavascript1 } from "react-icons/di";
+import {
+	SiFigma,
+	SiFirebase,
+	SiFramer,
+	SiGit,
+	SiGithub,
+	SiJest,
+	SiNextdotjs,
+	SiReact,
+	SiReactquery,
+	SiRedux,
+	SiSass,
+	SiShadcnui,
+	SiStyledcomponents,
+	SiSupabase,
+	SiTailwindcss,
+	SiTypescript,
+	SiVuedotjs
+} from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+
 export const CONTACT_EMAIL = "pjinadu02@gmail.com";
 
 export const MAILTO_CONFIG = {
@@ -139,4 +161,47 @@ export const PROJECTS = [
 				"The final product is a comprehensive hiring platform that successfully manages complex data flows and user permissions. DevHire demonstrates my ability to architect professional-grade applications that solve real-world business needs. By combining a keen eye for aesthetics with functional depth, I delivered a marketplace that feels as premium as the talent it aims to connect.",
 		},
 	},
+];
+
+export const STACK_CATEGORIES = [
+    {
+        title: "Architecture",
+        tools: [
+            { name: "TypeScript", icon: <SiTypescript /> },
+            { name: "JavaScript", icon: <DiJavascript1 /> },
+            { name: "Next.js", icon: <SiNextdotjs /> },
+            { name: "React", icon: <SiReact /> },
+            { name: "Vue", icon: <SiVuedotjs /> },
+            { name: "React Native", icon: <TbBrandReactNative /> },
+        ],
+    },
+    {
+        title: "State & Backend",
+        tools: [
+            { name: "React Query", icon: <SiReactquery /> },
+            { name: "Redux", icon: <SiRedux /> },
+            { name: "Supabase", icon: <SiSupabase /> },
+            { name: "Firebase", icon: <SiFirebase /> },
+        ],
+    },
+    {
+        title: "Experience & Motion",
+        tools: [
+            { name: "GSAP", icon: <span className='text-[10px] font-bold'>GSAP</span> },
+            { name: "Framer Motion", icon: <SiFramer /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+            { name: "Sass", icon: <SiSass /> },
+            { name: "Styled Components", icon: <SiStyledcomponents /> },
+            { name: "ShadCN", icon: <SiShadcnui /> },
+        ],
+    },
+    {
+        title: "Workflow, Design & Quality", 
+        tools: [
+            { name: "Git", icon: <SiGit /> }, 
+            { name: "GitHub", icon: <SiGithub /> }, 
+            { name: "Jest", icon: <SiJest /> },
+            { name: "Figma", icon: <SiFigma /> },
+        ],
+    },
 ];

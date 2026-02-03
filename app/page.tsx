@@ -4,6 +4,7 @@ import Loader from "@/components/Loader";
 import About from "@/components/about/About";
 import Hero from "@/components/home/Hero";
 import Projects from "@/components/projects/Projects";
+import Stack from "@/components/stack/Stack";
 import { globalState } from "@/lib/utils";
 import { useState } from "react";
 
@@ -23,7 +24,7 @@ const Home = () => {
 					<Hero />
 					<Projects />
 					<About />
-					{/* Add more sections here */}
+					<Stack />
 				</main>
 			)}
 		</>

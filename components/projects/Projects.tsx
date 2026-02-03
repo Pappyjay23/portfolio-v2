@@ -79,7 +79,7 @@ const Projects = () => {
 							</span>
 						</div>
 						<h2 className='text-4xl lg:text-6xl font-medium tracking-tight leading-[1.2]'>
-							Projects <br /> & Case Studies
+							Projects <br /><span className="text-gray-500">& Case Studies</span>
 						</h2>
 					</div>
 					<p className='max-w-75 text-sm text-gray-500 leading-relaxed pb-2'>

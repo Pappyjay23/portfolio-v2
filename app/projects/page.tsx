@@ -55,11 +55,12 @@ const Projects = () => {
 						</span>
 					</div>
 
-					<h1 className='text-4xl lg:text-6xl font-medium tracking-tight leading-[1.2] mb-4'>
-						Projects <br /> & Case Studies
-					</h1>
+					<h2 className='text-4xl lg:text-6xl font-medium tracking-tight leading-[1.2] mb-4'>
+						Projects <br />
+						<span className='text-gray-500'>& Case Studies</span>
+					</h2>
 
-					<p className='text-sm text-gray-500 leading-relaxed max-w-xl'>
+					<p className='text-sm text-gray-300 leading-relaxed max-w-xl'>
 						A focused collection of product work—spanning concept, design, and
 						engineering.
 					</p>
@@ -121,7 +122,7 @@ const Projects = () => {
 									{project.title}
 								</h2>
 
-								<p className='text-gray-500 leading-relaxed text-sm'>
+								<p className='text-gray-300 leading-relaxed text-sm'>
 									{project.description}
 								</p>
 
