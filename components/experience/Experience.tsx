@@ -1,5 +1,6 @@
 "use client";
 
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { EXPERIENCE } from "@/lib/constants";
 import gsap from "gsap";
 import { ArrowUpRight, Plus } from "lucide-react";
@@ -48,6 +49,7 @@ const Experience = () => {
 		}
 	};
 
+	useScrollSpy("experience");
 	return (
 		<section
 			ref={containerRef}
