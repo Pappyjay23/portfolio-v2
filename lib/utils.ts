@@ -20,12 +20,15 @@ export const handleScroll = (to: string) => {
     gsap.killTweensOf(window);
     gsap.killTweensOf(smoother);
 
+    globalState.activeSection = to;
+    window.dispatchEvent(new Event("navUpdate"));
+
     smoother.paused(false);
 
     const target = `#${to}`;
     if (document.querySelector(target)) {
         ScrollTrigger.refresh(); 
         
-        smoother.scrollTo(target, true, "top 60px");
+        smoother.scrollTo(target, true, "top 10px");
     }
 };
