@@ -1,4 +1,5 @@
 import { DiJavascript1 } from "react-icons/di";
+import { FaXTwitter } from "react-icons/fa6";
 import {
 	SiFigma,
 	SiFirebase,
@@ -6,6 +7,7 @@ import {
 	SiGit,
 	SiGithub,
 	SiJest,
+	SiLinkedin,
 	SiNextdotjs,
 	SiReact,
 	SiReactquery,
@@ -271,3 +273,21 @@ export const EXPERIENCE = [
 		],
 	},
 ];
+
+export const SOCIAL_LINKS = [
+	{
+		name: "GitHub",
+		url: "https://github.com/Pappyjay23",
+		icon: <SiGithub />,
+	},
+	{
+		name: "LinkedIn",
+		url: "https://www.linkedin.com/in/pappyjay",
+		icon: <SiLinkedin />,
+	},
+	{
+		name: "Twitter",
+		url: "https://x.com/_pappy_jay_",
+		icon: <FaXTwitter />,
+	},
+]

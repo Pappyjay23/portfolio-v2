@@ -76,7 +76,7 @@ const NavItem = ({
 		if (isAvatar && avatar) {
 			gsap.to(avatar, {
 				rotation: "+=360",
-				duration: 2,
+				duration: 1,
 				ease: "expo.out",
 				overwrite: true,
 			});

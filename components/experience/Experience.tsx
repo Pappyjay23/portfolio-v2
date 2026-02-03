@@ -3,6 +3,7 @@
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { EXPERIENCE } from "@/lib/constants";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -24,6 +25,8 @@ const Experience = () => {
 				opacity: 0,
 				duration: 0.5,
 				ease: "power3.inOut",
+				// Crucial: Refresh GSAP after closing
+				onComplete: () => ScrollTrigger.refresh(),
 			});
 			gsap.to(currentIcon, { rotate: 0, duration: 0.4 });
 		}
@@ -34,11 +37,17 @@ const Experience = () => {
 			gsap.fromTo(
 				content,
 				{ height: 0, opacity: 0 },
-				{ height: "auto", opacity: 1, duration: 0.6, ease: "power3.out" },
+				{
+					height: "auto",
+					opacity: 1,
+					duration: 0.6,
+					ease: "power3.out",
+					// Crucial: Refresh GSAP after opening
+					onComplete: () => ScrollTrigger.refresh(),
+				},
 			);
 			gsap.to(icon, { rotate: 45, duration: 0.4 });
 
-			// Subtle stagger for the list items inside
 			gsap.fromTo(
 				`#content-${id} li`,
 				{ x: -10, opacity: 0 },
@@ -72,7 +81,7 @@ const Experience = () => {
 					<a
 						href='/Peace_Jinadu-Paul_Resume.pdf'
 						target='_blank'
-						rel="noopener noreferrer"
+						rel='noopener noreferrer'
 						className='group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold border-b border-white/10 pb-2 hover:border-white transition-all duration-300 mb-2 w-fit'>
 						View Resume
 						<ArrowUpRight className='w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />

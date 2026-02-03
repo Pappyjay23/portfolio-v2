@@ -39,7 +39,7 @@ export default function SmoothScrollProvider({
 			speed: isTouch ? 0.9 : 1,
 			effects: true,
 			ignoreMobileResize: true,
-			normalizeScroll: true,
+			normalizeScroll: false,
 		});
 
 		return () => {
