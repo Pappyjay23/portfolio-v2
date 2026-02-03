@@ -16,7 +16,7 @@ import {
 	SiSupabase,
 	SiTailwindcss,
 	SiTypescript,
-	SiVuedotjs
+	SiVuedotjs,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -164,44 +164,110 @@ export const PROJECTS = [
 ];
 
 export const STACK_CATEGORIES = [
-    {
-        title: "Architecture",
-        tools: [
-            { name: "TypeScript", icon: <SiTypescript /> },
-            { name: "JavaScript", icon: <DiJavascript1 /> },
-            { name: "Next.js", icon: <SiNextdotjs /> },
-            { name: "React", icon: <SiReact /> },
-            { name: "Vue", icon: <SiVuedotjs /> },
-            { name: "React Native", icon: <TbBrandReactNative /> },
-        ],
-    },
-    {
-        title: "State & Backend",
-        tools: [
-            { name: "React Query", icon: <SiReactquery /> },
-            { name: "Redux", icon: <SiRedux /> },
-            { name: "Supabase", icon: <SiSupabase /> },
-            { name: "Firebase", icon: <SiFirebase /> },
-        ],
-    },
-    {
-        title: "Experience & Motion",
-        tools: [
-            { name: "GSAP", icon: <span className='text-[10px] font-bold'>GSAP</span> },
-            { name: "Framer Motion", icon: <SiFramer /> },
-            { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-            { name: "Sass", icon: <SiSass /> },
-            { name: "Styled Components", icon: <SiStyledcomponents /> },
-            { name: "ShadCN", icon: <SiShadcnui /> },
-        ],
-    },
-    {
-        title: "Workflow, Design & Quality", 
-        tools: [
-            { name: "Git", icon: <SiGit /> }, 
-            { name: "GitHub", icon: <SiGithub /> }, 
-            { name: "Jest", icon: <SiJest /> },
-            { name: "Figma", icon: <SiFigma /> },
-        ],
-    },
+	{
+		title: "Architecture",
+		tools: [
+			{ name: "TypeScript", icon: <SiTypescript /> },
+			{ name: "JavaScript", icon: <DiJavascript1 /> },
+			{ name: "Next.js", icon: <SiNextdotjs /> },
+			{ name: "React", icon: <SiReact /> },
+			{ name: "Vue", icon: <SiVuedotjs /> },
+			{ name: "React Native", icon: <TbBrandReactNative /> },
+		],
+	},
+	{
+		title: "State & Backend",
+		tools: [
+			{ name: "React Query", icon: <SiReactquery /> },
+			{ name: "Redux", icon: <SiRedux /> },
+			{ name: "Supabase", icon: <SiSupabase /> },
+			{ name: "Firebase", icon: <SiFirebase /> },
+		],
+	},
+	{
+		title: "Experience & Motion",
+		tools: [
+			{
+				name: "GSAP",
+				icon: <span className='text-[10px] font-bold'>GSAP</span>,
+			},
+			{ name: "Framer Motion", icon: <SiFramer /> },
+			{ name: "Tailwind CSS", icon: <SiTailwindcss /> },
+			{ name: "Sass", icon: <SiSass /> },
+			{ name: "Styled Components", icon: <SiStyledcomponents /> },
+			{ name: "ShadCN", icon: <SiShadcnui /> },
+		],
+	},
+	{
+		title: "Workflow, Design & Quality",
+		tools: [
+			{ name: "Git", icon: <SiGit /> },
+			{ name: "GitHub", icon: <SiGithub /> },
+			{ name: "Jest", icon: <SiJest /> },
+			{ name: "Figma", icon: <SiFigma /> },
+		],
+	},
+];
+
+export const EXPERIENCE = [
+	{
+		id: "techinnover",
+		company: "Techinnover",
+		role: "Frontend Engineer",
+		period: "Mar 2025 — Jan 2026",
+		location: "Lagos, Nigeria (Remote) ",
+		description:
+			"Architected scalable frontend solutions and complex user flows for high-stakes fintech and social ecosystems. ",
+		details: [
+			"Engineered a large-scale PWA with 20+ screens, bypassing native app store constraints for cross-platform accessibility. ",
+			"Developed 15+ secure user flows, including BVN verification systems that reduced fraud risk for withdrawals. ",
+			"Increased PWA adoption by 40% among iPhone users by implementing custom iOS installation prompts. ",
+			"Collaborated with stakeholders to provide technical input on product roadmaps and business decisions. ",
+		],
+	},
+	{
+		id: "vinhood",
+		company: "Vinhood",
+		role: "Frontend Engineer",
+		period: "Mar 2023 — Apr 2024",
+		location: "Milan, Italy (Remote) ",
+		description:
+			"Led UI standardization and performance optimization for a global wine-tech platform. ",
+		details: [
+			"Delivered 20+ features for the V2 rollout adopted across 5+ countries with 98% responsive compliance. ",
+			"Reduced load times on key pages by 35% through systematic optimization of reusable components. ",
+			"Decreased design inconsistencies by 30% by bridging the gap between design systems and engineering. ",
+			"Participated in rigorous code reviews to uphold frontend best practices and team code quality. ",
+		],
+	},
+	{
+		id: "hotels-ng",
+		company: "Hotels.ng",
+		role: "Frontend Engineer",
+		period: "Oct 2022 — Dec 2022",
+		location: "Lagos, Nigeria (Remote) ",
+		description:
+			"Rapidly developed and deployed live event-scheduling tools in a high-velocity team environment. ",
+		details: [
+			"Translated complex wireframes into 10+ production features with 95% implementation accuracy. ",
+			"Debugged and resolved 30+ critical frontend issues, directly improving application stability. ",
+			"Collaborated within a cross-functional team of 15+ members to deploy 'Catchup.' ",
+			"Utilized Git-based version control to manage complex merges and maintain codebase integrity. ",
+		],
+	},
+	{
+		id: "fiverr",
+		company: "Freelance",
+		role: "Developer & Designer",
+		period: "Dec 2021 — Feb 2022",
+		location: "Remote ",
+		description:
+			"Delivered end-to-end digital solutions for diverse global clients, balancing technical performance with aesthetic goals. ",
+		details: [
+			"Built, debugged, and optimized custom web applications tailored to specific business requirements. ",
+			"Managed the full project lifecycle, from requirement gathering to deployment and client handoff. ",
+			"Delivered high-quality digital assets and codebases on schedule through effective project management. ",
+			"Applied version control and performance best practices to ensure project reliability and maintainability. ",
+		],
+	},
 ];

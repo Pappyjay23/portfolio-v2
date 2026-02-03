@@ -45,16 +45,16 @@ const Stack = () => {
 		<section
 			ref={sectionRef}
 			id='stack'
-			className='bg-background text-foreground py-24 px-6 md:px-12'>
+			className='bg-background text-foreground py-12 px-6 md:px-12'>
 			<div className='max-w-300 mx-auto'>
 				<div className='flex flex-col mb-10'>
-					<div className='flex items-center gap-2 mb-4'>
+					<div className='flex items-center gap-2 mb-2'>
 						<div className='w-2 h-2 rounded-full bg-foreground animate-pulse' />
 						<span className='text-[10px] uppercase tracking-[0.3em] font-bold'>
 							Toolkit
 						</span>
 					</div>
-					<h2 className='stack-title text-4xl md:text-6xl font-medium tracking-tight'>
+					<h2 className='stack-title text-4xl lg:text-6xl font-medium tracking-tight'>
 						Technical <span className='text-gray-500'>Ecosystem</span>
 					</h2>
 				</div>

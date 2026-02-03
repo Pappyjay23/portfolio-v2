@@ -2,6 +2,7 @@
 
 import Loader from "@/components/Loader";
 import About from "@/components/about/About";
+import Experience from "@/components/experience/Experience";
 import Hero from "@/components/home/Hero";
 import Projects from "@/components/projects/Projects";
 import Stack from "@/components/stack/Stack";
@@ -25,6 +26,7 @@ const Home = () => {
 					<Projects />
 					<About />
 					<Stack />
+					<Experience />
 				</main>
 			)}
 		</>
