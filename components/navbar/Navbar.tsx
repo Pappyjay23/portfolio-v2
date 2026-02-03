@@ -73,7 +73,7 @@ const NavItem = ({
 			className='group relative flex items-center justify-center cursor-pointer outline-none'>
 			<div
 				className={`h-10 w-10 rounded-full flex justify-center items-center threed-effect active:scale-95 transform-gpu will-change-transform transition-all duration-500 ease-in-out group-hover:grayscale-0 outline-none border
-					${isActive ? "bg-white/5! border-white/20 grayscale-0 text-white/80!" : "bg-transparent border-transparent grayscale text-white/50"}
+					${isActive ? "bg-white/5! border-white/40 grayscale-0 text-white/80!" : "bg-transparent border-transparent grayscale text-white/50"}
                 ${isAvatar ? "p-1" : "text-white/50 hover:text-white"}`}>
 				{isAvatar ? (
 					<div className='h-full w-full outline-none border border-white/50 rounded-full overflow-hidden relative'>
