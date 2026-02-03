@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
 	const sectionRef = useRef(null);
-	const textRef = useRef(null);
 
 	useGSAP(
 		() => {
@@ -111,28 +110,36 @@ const About = () => {
 							<p className='text-[9px] uppercase tracking-widest text-gray-600 mb-1'>
 								Experience
 							</p>
-							<p className='text-xs md:text-sm font-medium'>4+ years shipping products</p>
+							<p className='text-xs md:text-sm font-medium'>
+								4+ years shipping products
+							</p>
 						</div>
 
 						<div>
 							<p className='text-[9px] uppercase tracking-widest text-gray-600 mb-1'>
 								Workflow
 							</p>
-							<p className='text-xs md:text-sm font-medium'>Design-led engineering</p>
+							<p className='text-xs md:text-sm font-medium'>
+								Design-led engineering
+							</p>
 						</div>
 
 						<div>
 							<p className='text-[9px] uppercase tracking-widest text-gray-600 mb-1'>
 								Systems
 							</p>
-							<p className='text-xs md:text-sm font-medium'>Reusable UI architecture</p>
+							<p className='text-xs md:text-sm font-medium'>
+								Reusable UI architecture
+							</p>
 						</div>
 
 						<div>
 							<p className='text-[9px] uppercase tracking-widest text-gray-600 mb-1'>
 								Focus
 							</p>
-							<p className='text-xs md:text-sm font-medium'>Performance & longevity</p>
+							<p className='text-xs md:text-sm font-medium'>
+								Performance & longevity
+							</p>
 						</div>
 					</div>
 				</div>

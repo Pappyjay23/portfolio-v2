@@ -2,6 +2,7 @@
 
 import { CONTACT_HREF } from "@/lib/constants";
 import { globalState, handleScroll } from "@/lib/utils";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -19,7 +20,7 @@ const navItemsList = [
 				src='/profile.jpg'
 				alt='Profile'
 				fill
-				className='object-cover object-top scale-[1.2] group-hover:scale-[1.4] border-0 outline-none rounded-full transition-all duration-500 ease-in-out'
+				className='object-cover object-top scale-[1.2] group-hover:scale-[1.4] border-0 outline-none transition-transform duration-500 ease-in-out rounded-full'
 			/>
 		),
 		label: "Home",
@@ -67,16 +68,31 @@ const NavItem = ({
 		return () => window.removeEventListener("navUpdate", handleUpdate);
 	}, [to]);
 
+	const handleClick = () => {
+		handleScroll(to);
+
+		const avatar = document.querySelector(".nav-avatar");
+
+		if (isAvatar && avatar) {
+			gsap.to(avatar, {
+				rotation: "+=360",
+				duration: 2,
+				ease: "expo.out",
+				overwrite: true,
+			});
+		}
+	};
+
 	return (
 		<button
-			onClick={() => handleScroll(to)}
+			onClick={handleClick}
 			className='group relative flex items-center justify-center cursor-pointer outline-none'>
 			<div
 				className={`h-10 w-10 rounded-full flex justify-center items-center threed-effect active:scale-95 transform-gpu will-change-transform transition-all duration-500 ease-in-out group-hover:grayscale-0 outline-none border
 					${isActive ? "bg-white/5! border-white/40 grayscale-0 text-white/80!" : "bg-transparent border-transparent grayscale text-white/50"}
                 ${isAvatar ? "p-1" : "text-white/50 hover:text-white"}`}>
 				{isAvatar ? (
-					<div className='h-full w-full outline-none border border-white/50 rounded-full overflow-hidden relative'>
+					<div className='nav-avatar h-full w-full outline-none border border-white/50 rounded-full overflow-hidden relative'>
 						{icon}
 					</div>
 				) : (

@@ -48,7 +48,10 @@ const NotFound = () => {
 			className='bg-background min-h-screen flex flex-col items-center justify-center px-6 text-center'>
 			{/* Background Decorative Element */}
 			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1'>
-				<h1 className='error-code text-[20vw] font-bold text-white/2 select-none leading-none'>
+				<h1 className='error-code text-[15rem] md:text-[50vw] lg:text-[30vw] font-bold select-none leading-none' style={{
+					WebkitTextFillColor: "transparent",
+					WebkitTextStroke: "1px rgb(255 255 255 / 0.05)",
+				}}>
 					404
 				</h1>
 			</div>
@@ -64,7 +67,7 @@ const NotFound = () => {
 			<div className='flex justify-center relative z-10'>
 				<Link
 					href='/'
-					className='back-home w-fit group flex items-center gap-3 px-8 py-4 border border-white/10 rounded-full hover:bg-white/1 text-foreground active:scale-95 transition-transform duration-500 ease-in-out'>
+					className='back-home w-fit group flex items-center gap-3 px-8 py-4 border border-white/10 backdrop-blur-md rounded-full hover:bg-white/1 text-foreground active:scale-95 transition-transform duration-500 ease-in-out'>
 					<FiArrowLeft className='group-hover:-translate-x-1 transition-transform' />
 					<span className='text-[10px] uppercase tracking-[0.2em] font-bold'>
 						Return to Index
