@@ -44,7 +44,7 @@ const Projects = () => {
 	return (
 		<main
 			ref={containerRef}
-			className='py-24 px-6 md:px-12 bg-background min-h-screen'>
+			className='py-20 md:py-24 px-6 md:px-12 bg-background min-h-svh'>
 			<div className='max-w-300 mx-auto'>
 				{/* Header */}
 				<header className='projects-header mb-10 md:mb-16 max-w-3xl'>
@@ -55,7 +55,7 @@ const Projects = () => {
 						</span>
 					</div>
 
-					<h1 className='text-4xl lg:text-6xl font-medium tracking-tight leading-none mb-4'>
+					<h1 className='text-4xl lg:text-6xl font-medium tracking-tight leading-[1.2] mb-4'>
 						Projects <br /> & Case Studies
 					</h1>
 
@@ -78,7 +78,7 @@ const Projects = () => {
 								onClick={() =>
 									router.push(`/projects/${project.title.toLowerCase()}`)
 								}
-								className='group relative w-full md:w-3/5 aspect-4/3 overflow-hidden rounded-[25px] bg-foreground/5 cursor-pointer'>
+								className='group relative w-full md:w-3/5 aspect-4/3 overflow-hidden rounded-[15px] md:rounded-[25px] bg-foreground/5 cursor-pointer'>
 								<div
 									className='absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shimmer'
 									style={{ backgroundSize: "200% 100%" }}
@@ -113,7 +113,7 @@ const Projects = () => {
 
 							{/* Content */}
 							<div className='w-full md:w-2/5 flex flex-col space-y-3'>
-								<span className='text-[10px] uppercase tracking-[0.25em] text-gray-400 font-mono'>
+								<span className='text-[10px] uppercase tracking-[0.25em] text-gray-400'>
 									0{index + 1} — {project.category}
 								</span>
 

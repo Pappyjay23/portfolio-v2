@@ -78,7 +78,7 @@ const Projects = () => {
 								Selected Works
 							</span>
 						</div>
-						<h2 className='text-4xl lg:text-6xl font-medium tracking-tight leading-none'>
+						<h2 className='text-4xl lg:text-6xl font-medium tracking-tight leading-[1.2]'>
 							Projects <br /> & Case Studies
 						</h2>
 					</div>
@@ -98,7 +98,7 @@ const Projects = () => {
 							key={index}
 							className='project-card group cursor-pointer'>
 							{/* Image Container */}
-							<div className='relative aspect-square w-full overflow-hidden bg-foreground/5 rounded-[25px] mb-6'>
+							<div className='relative aspect-square w-full overflow-hidden bg-foreground/5 rounded-[15px] md:rounded-[25px] mb-6'>
 								<div
 									className='absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shimmer'
 									style={{ backgroundSize: "200% 100%" }}

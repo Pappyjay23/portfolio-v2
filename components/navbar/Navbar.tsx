@@ -3,8 +3,10 @@
 import { CONTACT_HREF } from "@/lib/constants";
 import { globalState, handleScroll } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { FiArrowLeft } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import { IoBriefcaseOutline } from "react-icons/io5";
@@ -130,21 +132,33 @@ const Navbar = () => {
 		return (
 			<nav
 				key='sub-nav'
-				className={`w-full flex justify-between items-center px-6 md:px-12 ${transitionClass} ${
+				className={`w-full flex justify-between items-center px-3 md:px-12 ${transitionClass} ${
 					isVisible ? "opacity-100" : "opacity-0"
 				}`}>
 				<button
 					onClick={handleBack}
-					className='group flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground cursor-pointer backdrop-blur-md bg-background/5 p-1 rounded-full shadow-background/30 shadow-xs'>
-					<span className='w-8 h-px bg-foreground transition-all duration-500 group-hover:w-12' />
-					Go Back
+					className='group flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground cursor-pointer backdrop-blur-md bg-background/5 p-2 md:p-1 rounded-full shadow-background/30 shadow-xs'>
+					<span className='hidden md:block w-8 h-px bg-foreground transition-all duration-500 group-hover:w-12' />
+
+					<span className='hidden md:block'>Go Back</span>
+
+					<FiArrowLeft className='md:hidden' size={16} />
 				</button>
+
+				<Link
+					href='/'
+					className='absolute left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-500 ease-in-out backdrop-blur-md bg-background/5 p-2 px-4 md:p-1 md:px-3 rounded-full shadow-background/30 shadow-xs'>
+					Index
+				</Link>
 
 				<a
 					href={CONTACT_HREF}
 					className='px-3 md:px-4 py-0.5 md:py-1.5 bg-foreground outline-0 border-0 text-black rounded-full font-bold transition-all duration-300 hover:bg-gray-200 active:scale-95 items-center justify-center flex gap-1 shadow-background/30 shadow-xs'>
-					<span className='text-xs mt-0.5'>Reach out</span>
-					<span className='animate-wave text-xl -mt-0.5'>👋</span>
+					<span className='text-[10px] md:text-xs mt-0.5'>
+						<span className='hidden xs:inline'>Reach out</span>
+						<span className='xs:hidden'>Chat</span>
+					</span>
+					<span className='animate-wave text-lg md:text-xl -mt-0.5'>👋</span>
 				</a>
 			</nav>
 		);
