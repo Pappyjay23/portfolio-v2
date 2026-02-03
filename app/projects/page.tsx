@@ -92,7 +92,7 @@ const Projects = () => {
 								/>
 
 								{/* Overlay */}
-								<div className='absolute inset-0 bg-linear-to-b from-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+								<div className='absolute z-15 inset-0 bg-linear-to-b from-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
 
 								{/* Corner affordance */}
 								<a
@@ -100,7 +100,7 @@ const Projects = () => {
 									target='_blank'
 									rel='noopener noreferrer'
 									onClick={(e) => e.stopPropagation()}
-									className='absolute bottom-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-500  hover:text-foreground -translate-y-2 group-hover:translate-y-0 flex items-center gap-2 lg:gap-0 lg:hover:gap-2 group/btn'>
+									className='absolute z-20 bottom-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-500  hover:text-foreground -translate-y-2 group-hover:translate-y-0 flex items-center gap-2 lg:gap-0 lg:hover:gap-2 group/btn'>
 									<span className='text-[10px] font-bold capitalize max-w-25 lg:max-w-0 overflow-hidden group-hover/btn:max-w-25 transition-all duration-500 ease-in-out whitespace-nowrap'>
 										Live Demo
 									</span>
