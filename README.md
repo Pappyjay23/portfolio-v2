@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h1> 🌌 Peace Jinadu-Paul | Portfolio </h1>
+  <p><strong>Innovative Front-End Engineer & Aesthetic Architect</strong></p>
 
-## Getting Started
+  <a href="https://peacejp.dev"><strong>View Live Site →</strong></a>
+</div>
 
-First, run the development server:
+<br />
+
+## 🌟 Overview
+
+This is the central hub for my work, thoughts, and technical experiments. More than just a resume, this portfolio is a study in **scalable web architecture** and **immersive user experiences**. 
+
+Built with a focus on fluidity and performance, it leverages high-end motion libraries and modern testing suites to ensure a seamless experience across all devices—from desktop monitors to mobile browsers.
+
+## Snapshot 📸
+<img width="1920" alt="Portfolio Preview" src="https://peacejp.dev/api/og" />
+
+## 🛠 Tech Stack
+- **[Next.js 14](https://nextjs.org/)** – App Router architecture for optimized routing and SSR.
+- **[TypeScript](https://www.typescriptlang.org/)** – Ensuring type-safety and scalable code.
+- **[GSAP](https://gsap.com/)** – Complex orchestration of scroll-triggered and micro-interactive animations.
+- **[Playwright](https://playwright.dev/)** – End-to-end testing suite (configured for WebKit/Mobile Safari stability).
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first styling for a maintainable design system.
+- **[Shadcn/UI](https://ui.shadcn.com/)** – Radix-based accessible component foundations.
+
+## 🚀 Engineering Highlights
+- **Motion Orchestration**: Seamless integration of GSAP's `ScrollSmoother` and `ScrollTrigger` for a high-end, cinematic feel.
+- **Cross-Platform Stability**: Robust E2E testing using Playwright to eliminate client-side exceptions on specific environments like iOS/WebKit.
+- **Responsive Architecture**: A mobile-first approach ensuring that complex layouts remain functional and beautiful on any screen size.
+- **Performance Optimized**: Fine-tuned Core Web Vitals with optimized font loading and image delivery.
+
+## How to run locally 💻
+
+### Clone the repository
+```bash
+git clone https://github.com/Pappyjay23/portfolio-v2.git
+```
+
+### Navigate to the directory
+
+```bash
+cd portfolio-v2
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run
+
+Run the development server to view the app.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now, you can navigate to http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### Run Testing Suite (Playwright)
+```bash
+# To run tests specifically for mobile/webkit
+npx playwright test --project="webkit"
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Credits ✍
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed and Engineered by [@Pappyjay23](https://github.com/Pappyjay23)
