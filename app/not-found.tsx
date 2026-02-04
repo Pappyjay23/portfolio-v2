@@ -45,7 +45,7 @@ const NotFound = () => {
 	return (
 		<main
 			ref={containerRef}
-			className='bg-background min-h-screen flex flex-col items-center justify-center px-6 text-center'>
+			className='bg-background min-h-svh flex flex-col items-center justify-center px-6 text-center'>
 			{/* Background Decorative Element */}
 			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1'>
 				<h1 className='error-code text-[15rem] md:text-[50vw] lg:text-[30vw] font-bold select-none leading-none' style={{
