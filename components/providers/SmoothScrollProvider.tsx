@@ -4,10 +4,11 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Added this
 import { usePathname } from "next/navigation";
 
 if (typeof window !== "undefined") {
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 }
 
 export default function SmoothScrollProvider({
@@ -18,6 +19,7 @@ export default function SmoothScrollProvider({
 	const wrapperRef = useRef<HTMLDivElement>(null);
 	const contentRef = useRef<HTMLDivElement>(null);
 	const pathname = usePathname();
+
 	const isTouch =
 		typeof window !== "undefined" &&
 		(navigator.maxTouchPoints > 0 ||
@@ -30,7 +32,6 @@ export default function SmoothScrollProvider({
 		const prev = ScrollSmoother.get();
 		if (prev) prev.kill();
 
-		// Initialize Smoother
 		const smoother = ScrollSmoother.create({
 			wrapper: wrapperRef.current,
 			content: contentRef.current,
@@ -47,16 +48,17 @@ export default function SmoothScrollProvider({
 		};
 	}, []);
 
-	// Recalculate page height on route change
+	// Handle Route Changes
 	useEffect(() => {
 		const smoother = ScrollSmoother.get();
 		if (smoother) {
-			gsap.set(window, { scrollTo: 0 });
+			smoother.paused(true);
 			smoother.scrollTop(0);
+			smoother.paused(false);
 
 			const timer = setTimeout(() => {
 				ScrollTrigger.refresh();
-			}, 200);
+			}, 500); // Increased slightly for mobile hydration stability
 
 			return () => clearTimeout(timer);
 		}

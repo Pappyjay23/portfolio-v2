@@ -21,6 +21,7 @@ import {
 	SiVuedotjs,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import { VscDebugAlt } from "react-icons/vsc";
 
 export const CONTACT_EMAIL = "pjinadu02@gmail.com";
 
@@ -206,6 +207,7 @@ export const STACK_CATEGORIES = [
 			{ name: "Git", icon: <SiGit /> },
 			{ name: "GitHub", icon: <SiGithub /> },
 			{ name: "Jest", icon: <SiJest /> },
+			{ name: "Playwright", icon: <VscDebugAlt /> },
 			{ name: "Figma", icon: <SiFigma /> },
 		],
 	},
@@ -290,4 +292,4 @@ export const SOCIAL_LINKS = [
 		url: "https://x.com/_pappy_jay_",
 		icon: <FaXTwitter />,
 	},
-]
+];
