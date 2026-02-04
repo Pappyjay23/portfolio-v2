@@ -73,4 +73,4 @@ npx playwright test --project="webkit"
 
 ## Credits ✍
 
-Designed and Engineered by [@Pappyjay23](https://github.com/Pappyjay23)
+Designed and Engineered by [Peace Jinadu-Paul](https://github.com/Pappyjay23)
