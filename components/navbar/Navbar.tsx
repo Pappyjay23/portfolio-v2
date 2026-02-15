@@ -163,6 +163,7 @@ const Navbar = () => {
 
 				<Link
 					href='/'
+					onClick={() => (globalState.activeSection = "hero")}
 					className='absolute left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-500 ease-in-out backdrop-blur-md bg-background/5 p-2 px-4 md:p-1 md:px-3 rounded-full shadow-background/30 shadow-xs'>
 					Index
 				</Link>
