@@ -93,7 +93,7 @@ const Projects = () => {
 					{PROJECTS.slice(0, 3).map((project, index) => (
 						<div
 							onClick={() =>
-								router.push(`/projects/${project.title.toLowerCase()}`)
+								router.push(`/projects/${project.slug}`)
 							}
 							key={index}
 							className='project-card group cursor-pointer'>

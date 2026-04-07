@@ -55,7 +55,7 @@ const Hero = () => {
 					}`}>
 					<div className='px-4 py-2 border border-gray-700 rounded-full'>
 						<p className='text-[10px] md:text-xs uppercase tracking-[0.3em] text-gray-400'>
-							Frontend Engineer
+							Software Engineer
 						</p>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ const Hero = () => {
 						isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}>
 					Specialized in React, TypeScript, and modern web technologies to
-					create performant, accessible, and beautiful user experiences.
+					create scalable, performant, accessible, and beautiful user experiences.
 				</p>
 
 				{/* CTAs */}

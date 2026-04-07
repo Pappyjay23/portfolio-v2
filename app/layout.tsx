@@ -16,9 +16,9 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-	title: "Peace Jinadu-Paul | Frontend Engineer",
+	title: "Peace Jinadu-Paul | Software Engineer",
 	description:
-		"An innovative front-end engineer with a keen eye for aesthetics as well as experience building and maintaining responsive, functional, interactive and scalable web architectures.",
+		"An innovative software engineer with a keen eye for aesthetics as well as experience building and maintaining responsive, functional, interactive and scalable web architectures.",
 	keywords: [
 		"Peace Jinadu-Paul",
 		"Front-End Engineer",
@@ -31,25 +31,25 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://peacejp.dev",
-		title: "Peace Jinadu-Paul | Front-End Engineer",
+		title: "Peace Jinadu-Paul | Software Engineer",
 		description:
-			"An innovative front-end engineer with a keen eye for aesthetics and experience building responsive, secure, and scalable digital products.",
+			"An innovative software engineer with a keen eye for aesthetics and experience building responsive, secure, and scalable digital products.",
 		siteName: "Peace Jinadu-Paul Portfolio",
 		images: [
 			{
 				url: "https://peacejp.dev/api/og", // Recommended size: 1200x630
 				width: 1200,
 				height: 630,
-				alt: "Peace Jinadu-Paul | Frontend Engineer",
+				alt: "Peace Jinadu-Paul | Software Engineer",
 			},
 		],
 	},
 	// Twitter
 	twitter: {
 		card: "summary_large_image",
-		title: "Peace Jinadu-Paul | Front-End Engineer",
+		title: "Peace Jinadu-Paul | Software Engineer",
 		description:
-			"An innovative front-end engineer with a keen eye for aesthetics and experience building responsive, secure, and scalable web architectures.",
+			"An innovative software engineer with a keen eye for aesthetics and experience building responsive, secure, and scalable web architectures.",
 		creator: "@_pappy_jay_",
 		site: "@_pappy_jay_",
 		images: ["https://peacejp.dev/api/og"],

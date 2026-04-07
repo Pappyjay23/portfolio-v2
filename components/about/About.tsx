@@ -91,11 +91,11 @@ const About = () => {
 						<p className='about-paragraph text-gray-400 leading-relaxed text-xs md:text-sm font-light'>
 							Leveraging a deep expertise in{" "}
 							<strong className="font-bold">
-								React, TypeScript, and modern animation primitives
+								 React, TypeScript, Node.js, and modern web technologies
 							</strong>
 							, I transform complex requirements into intuitive digital
-							experiences. From high-performance task management systems to
-							immersive 3D storytelling, I maintain a
+							experiences. From full-stack applications with secure authentication
+							to immersive 3D storytelling, I maintain a
 							<strong className="font-bold"> meticulous eye for detail</strong> that ensures design
 							systems are translated into clean, maintainable code—honoring the
 							intent of every pixel while optimizing for real-world performance.
@@ -127,7 +127,7 @@ const About = () => {
 								Systems
 							</p>
 							<p className='text-xs md:text-sm font-medium'>
-								Reusable UI architecture
+								Component-driven architecture
 							</p>
 						</div>
 
