@@ -111,7 +111,7 @@ export async function GET() {
 							textTransform: "uppercase",
 							display: "flex",
 						}}>
-						Frontend Engineer
+						Software Engineer
 					</span>
 				</div>
 
@@ -158,7 +158,7 @@ export async function GET() {
 						marginTop: "24px",
 						justifyContent: "center",
 					}}>
-					{["React", "TypeScript", "Next.js", "Tailwind"].map((tech) => (
+					{["React", "TypeScript", "Next.js", "Tailwind", "Node.js"].map((tech) => (
 						<div
 							key={tech}
 							style={{

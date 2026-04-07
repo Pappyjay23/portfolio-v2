@@ -18,7 +18,7 @@ const ProjectDetail = () => {
 	const { id } = useParams();
 	const containerRef = useRef(null);
 
-	const currentIndex = PROJECTS.findIndex((p) => p.title.toLowerCase() === id);
+	const currentIndex = PROJECTS.findIndex((p) => p.slug === id);
 	const project = PROJECTS[currentIndex];
 
 	const prevProject = PROJECTS[currentIndex - 1] || null;
@@ -153,14 +153,18 @@ const ProjectDetail = () => {
 					</div>
 
 					<div className='case-study-section'>
-						<h4 className='text-xs md:text-sm uppercase tracking-[0.2em] text-gray-300 mb-4 font-bold'>The Approach</h4>
+						<h4 className='text-xs md:text-sm uppercase tracking-[0.2em] text-gray-300 mb-4 font-bold'>
+							The Approach
+						</h4>
 						<p className='text-xs md:text-sm text-gray-400 leading-relaxed'>
 							{project.details.theApproach}
 						</p>
 					</div>
 
 					<div className='case-study-section'>
-						<h4 className='text-xs md:text-sm uppercase tracking-[0.2em] text-gray-300 mb-4 font-bold'>The Result</h4>
+						<h4 className='text-xs md:text-sm uppercase tracking-[0.2em] text-gray-300 mb-4 font-bold'>
+							The Result
+						</h4>
 						<p className='text-xs md:text-sm text-gray-400 leading-relaxed'>
 							{project.details.theResult}
 						</p>
@@ -173,12 +177,14 @@ const ProjectDetail = () => {
 				<div className='max-w-300 mx-auto flex justify-between items-center'>
 					{prevProject ? (
 						<Link
-							href={`/projects/${prevProject.title.toLowerCase()}`}
+							href={`/projects/${prevProject.slug}`}
 							className='group flex flex-col items-start gap-1'>
 							<span className='flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors'>
 								<FiArrowLeft /> Previous
 							</span>
-							<span className='text-base md:text-lg font-medium'>{prevProject.title}</span>
+							<span className='text-base md:text-lg font-medium'>
+								{prevProject.title}
+							</span>
 						</Link>
 					) : (
 						<div />
@@ -186,12 +192,14 @@ const ProjectDetail = () => {
 
 					{nextProject ? (
 						<Link
-							href={`/projects/${nextProject.title.toLowerCase()}`}
+							href={`/projects/${nextProject.slug}`}
 							className='group flex flex-col items-end gap-1 text-right'>
 							<span className='flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors'>
 								Next <FiArrowRight />
 							</span>
-							<span className='text-base md:text-lg font-medium'>{nextProject.title}</span>
+							<span className='text-base md:text-lg font-medium'>
+								{nextProject.title}
+							</span>
 						</Link>
 					) : (
 						<div />

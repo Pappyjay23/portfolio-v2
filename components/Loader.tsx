@@ -124,7 +124,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
 				/>
 			</svg>
 			<p className='subtitle -mt-2 md:mt-0 font-medium text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/60'>
-				Frontend Engineer
+				Software Engineer
 			</p>
 		</div>
 	);

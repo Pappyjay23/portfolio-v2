@@ -1,6 +1,7 @@
 import { DiJavascript1 } from "react-icons/di";
 import { FaXTwitter } from "react-icons/fa6";
 import {
+	SiExpress,
 	SiFigma,
 	SiFirebase,
 	SiFramer,
@@ -8,15 +9,19 @@ import {
 	SiGithub,
 	SiJest,
 	SiLinkedin,
+	SiMongodb,
 	SiNextdotjs,
+	SiNodedotjs,
 	SiReact,
 	SiReactquery,
 	SiRedux,
 	SiSass,
 	SiShadcnui,
+	SiStorybook,
 	SiStyledcomponents,
 	SiSupabase,
 	SiTailwindcss,
+	SiTestinglibrary,
 	SiTypescript,
 	SiVuedotjs,
 } from "react-icons/si";
@@ -37,6 +42,7 @@ export const CONTACT_HREF = `mailto:${CONTACT_EMAIL}?subject=${MAILTO_CONFIG.sub
 export const PROJECTS = [
 	{
 		title: "OrbitDesk",
+		slug: "orbitdesk",
 		description:
 			"A centralized work command center designed for seamless cross-border team collaboration.",
 		category: "Productivity",
@@ -56,7 +62,29 @@ export const PROJECTS = [
 		},
 	},
 	{
+		title: "Memoir Notes",
+		slug: "memoir-notes",
+		description:
+			"A secure full-stack note-taking application with real-time synchronization and JWT-based authentication.",
+		category: "Note Management",
+		image: "/memoir-notes.jpg",
+		tech: ["React.js", "Node.js", "Express", "MongoDB", "Axios", "JWT"],
+		link: "https://memoirnotes.vercel.app",
+		repo: "https://github.com/Pappyjay23/memoir-notes",
+		details: {
+			summary:
+				"Memoir Notes was engineered as a demonstration of full-stack architectural competency, bridging the gap between frontend state management and backend data persistence. The project addresses the fundamental challenge of building a secure, scalable note-taking system where user authentication, CRUD operations, and real-time data synchronization must work seamlessly across distributed environments. It serves as a technical proof-of-concept for end-to-end application development—from database schema design to production deployment.",
+			whatWasBuilt:
+				"I architected a complete full-stack application featuring a RESTful API backend built with Node.js and Express, paired with a React frontend utilizing Axios for efficient HTTP communication. The system implements JWT-based authentication with refresh token rotation for enhanced security, modular Express controllers for clean separation of concerns, and MongoDB for flexible document-based data storage. Key features include secure CRUD operations with protected routes, optimized data fetching with client-side state management, and persistent user sessions managed through HTTP-only cookies.",
+			theApproach:
+				"My engineering philosophy centered on building a production-grade architecture that balances security, performance, and maintainability. On the backend, I structured the Express API using a modular controller-service pattern with custom middleware for authentication and error handling. For the frontend, I implemented a clean component architecture with React's built-in state management, keeping the application lightweight while maintaining full reactivity. The authentication layer implements industry-standard practices: access tokens for API authorization and refresh tokens for session persistence, with automatic token rotation to mitigate security risks.",
+			theResult:
+				"The final product is a fully deployed, production-ready application that demonstrates a comprehensive understanding of modern full-stack development. By successfully integrating a Node.js backend with a React frontend and deploying them independently—backend on Railway, frontend on Vercel—Memoir Notes showcases my ability to architect, build, and ship complete web applications. The project stands as tangible evidence of my capability to handle both client-side and server-side development, manage complex data flows, and implement secure authentication systems from scratch.",
+		},
+	},
+	{
 		title: "Cinera",
+		slug: "cinera",
 		description:
 			"A motion-centric cinema platform delivering a high-fidelity movie discovery experience.",
 		category: "Media Discovery",
@@ -85,7 +113,29 @@ export const PROJECTS = [
 		},
 	},
 	{
+		title: "DevHire",
+		slug: "devhire",
+		description:
+			"Strategic hiring marketplace connecting top-tier tech talent with global opportunities.",
+		category: "Hiring Platform",
+		image: "/devhire.jpg",
+		tech: ["Vue.js", "Pinia", "Firebase", "Axios", "Tailwind Css"],
+		link: "https://dev-hire-vp.vercel.app",
+		repo: "https://github.com/Pappyjay23/DevHire",
+		details: {
+			summary:
+				"DevHire was engineered as a dual-sided marketplace designed to streamline the tech recruitment lifecycle. Recognizing the fragmentation in the job market, I built this platform to act as a bridge between high-tier developers and forward-thinking employers. The challenge was to create a unified interface that accommodates two distinct user journeys: talent acquisition for employers and career discovery for engineers.",
+			whatWasBuilt:
+				"I developed a robust hiring ecosystem featuring a multi-role authentication system. The application performs sophisticated data aggregation, merging real-time job listings from an external recruitment API with proprietary postings stored in a Firebase back-end. Key features include a dynamic job posting engine for employers, developer profile management, and a centralized dashboard for tracking applications.",
+			theApproach:
+				"My approach centered on creating a modular, scalable architecture using Vue 3 and Pinia. To handle the complexity of dual user roles, I implemented conditional rendering logic and secure route guards to ensure a tailored experience for both developers and recruiters. I utilized Axios for high-performance API integration and focused on a data-dense yet intuitive UI that enables quick scanning of job requirements and candidate skills.",
+			theResult:
+				"The final product is a comprehensive hiring platform that successfully manages complex data flows and user permissions. DevHire demonstrates my ability to architect professional-grade applications that solve real-world business needs. By combining a keen eye for aesthetics with functional depth, I delivered a marketplace that feels as premium as the talent it aims to connect.",
+		},
+	},
+	{
 		title: "Halo",
+		slug: "halo",
 		description:
 			"Immersive 3D audio-visual landing experience pushing the boundaries of web interactivity.",
 		category: "Immersive Experience",
@@ -106,6 +156,7 @@ export const PROJECTS = [
 	},
 	{
 		title: "ArtSphere",
+		slug: "artsphere",
 		description:
 			"A refined digital gallery focusing on visual storytelling and high-quality image discovery.",
 		category: "Visual Curation",
@@ -124,90 +175,60 @@ export const PROJECTS = [
 				"The final platform is a high-performance visual discovery tool that demonstrates a keen eye for aesthetics and technical efficiency. By offloading image processing to the edge via Cloudinary and maintaining a lean Vue-based architecture, ArtSphere delivers a premium gallery experience that balances high-density visual content with the rapid response times expected of modern web applications.",
 		},
 	},
-	{
-		title: "FlowBoard",
-		description:
-			"A high-performance task management system featuring fluid drag-and-drop workflows.",
-		category: "Task Workflow",
-		image: "/flowboard.jpg",
-		tech: ["React.js", "Dnd-Kit", "Context API", "Tailwind Css"],
-		link: "https://flowboard-vp.vercel.app",
-		repo: "https://github.com/Pappyjay23/FlowBoard",
-		details: {
-			summary:
-				"FlowBoard was engineered to optimize the cognitive load of task management through a highly tactile, reactive interface. The project addresses the need for a 'flow-state' workspace where users can organize complex projects without interface lag. It prioritizes immediate visual feedback and persistent state to ensure a reliable and frictionless productivity experience.",
-			whatWasBuilt:
-				"I developed a sophisticated Kanban-style dashboard utilizing @dnd-kit for high-performance drag-and-drop interactions. The system features a multi-context architecture for independent state management of tasks, modals, and themes. Key functionalities include real-time task filtering, priority indicators, and a robust localStorage persistence layer that ensures user data remains intact across sessions without the need for a traditional database overhead.",
-			theApproach:
-				"My engineering philosophy for FlowBoard centered on 'predictable state transitions.' By utilizing the React Context API with TypeScript, I created a strictly typed data flow that handles complex task movements between status columns. I focused on accessibility and performance, ensuring that the drag-and-drop logic remained lightweight and responsive on mobile devices while using Tailwind CSS to maintain a clean, architectural aesthetic.",
-			theResult:
-				"The final product is a high-utility dashboard that demonstrates a deep understanding of interactive UI patterns. FlowBoard successfully balances complex functional requirements with a minimalist design, resulting in a tool that feels both powerful and easy to navigate. The project stands as a testament to my ability to build scalable, component-based applications that prioritize the end-user's fluid workflow.",
-		},
-	},
-	{
-		title: "DevHire",
-		description:
-			"Strategic hiring marketplace connecting top-tier tech talent with global opportunities.",
-		category: "Hiring Platform",
-		image: "/devhire.jpg",
-		tech: ["Vue.js", "Pinia", "Firebase", "Axios", "Tailwind Css"],
-		link: "https://dev-hire-vp.vercel.app",
-		repo: "https://github.com/Pappyjay23/DevHire",
-		details: {
-			summary:
-				"DevHire was engineered as a dual-sided marketplace designed to streamline the tech recruitment lifecycle. Recognizing the fragmentation in the job market, I built this platform to act as a bridge between high-tier developers and forward-thinking employers. The challenge was to create a unified interface that accommodates two distinct user journeys: talent acquisition for employers and career discovery for engineers.",
-			whatWasBuilt:
-				"I developed a robust hiring ecosystem featuring a multi-role authentication system. The application performs sophisticated data aggregation, merging real-time job listings from an external recruitment API with proprietary postings stored in a Firebase back-end. Key features include a dynamic job posting engine for employers, developer profile management, and a centralized dashboard for tracking applications.",
-			theApproach:
-				"My approach centered on creating a modular, scalable architecture using Vue 3 and Pinia. To handle the complexity of dual user roles, I implemented conditional rendering logic and secure route guards to ensure a tailored experience for both developers and recruiters. I utilized Axios for high-performance API integration and focused on a data-dense yet intuitive UI that enables quick scanning of job requirements and candidate skills.",
-			theResult:
-				"The final product is a comprehensive hiring platform that successfully manages complex data flows and user permissions. DevHire demonstrates my ability to architect professional-grade applications that solve real-world business needs. By combining a keen eye for aesthetics with functional depth, I delivered a marketplace that feels as premium as the talent it aims to connect.",
-		},
-	},
 ];
 
 export const STACK_CATEGORIES = [
 	{
-		title: "Architecture",
+		title: "Languages & Frameworks",
 		tools: [
 			{ name: "TypeScript", icon: <SiTypescript /> },
 			{ name: "JavaScript", icon: <DiJavascript1 /> },
-			{ name: "Next.js", icon: <SiNextdotjs /> },
 			{ name: "React", icon: <SiReact /> },
+			{ name: "Next.js", icon: <SiNextdotjs /> },
 			{ name: "Vue", icon: <SiVuedotjs /> },
 			{ name: "React Native", icon: <TbBrandReactNative /> },
 		],
 	},
 	{
-		title: "State & Backend",
+		title: "Styling & Animation",
 		tools: [
-			{ name: "React Query", icon: <SiReactquery /> },
+			{ name: "Tailwind CSS", icon: <SiTailwindcss /> },
+			{ name: "Sass", icon: <SiSass /> },
+			{ name: "Styled Components", icon: <SiStyledcomponents /> },
+			{ name: "ShadCN", icon: <SiShadcnui /> },
+			{ name: "Framer Motion", icon: <SiFramer /> },
+			{
+				name: "GSAP",
+				icon: <span className='text-[10px] font-bold'>GSAP</span>,
+			},
+		],
+	},
+	{
+		title: "State Management",
+		tools: [
 			{ name: "Redux", icon: <SiRedux /> },
+			{ name: "React Query", icon: <SiReactquery /> },
+		],
+	},
+	{
+		title: "Backend & Database",
+		tools: [
+			{ name: "Node.js", icon: <SiNodedotjs /> },
+			{ name: "Express.js", icon: <SiExpress /> },
+			{ name: "MongoDB", icon: <SiMongodb /> },
 			{ name: "Supabase", icon: <SiSupabase /> },
 			{ name: "Firebase", icon: <SiFirebase /> },
 		],
 	},
 	{
-		title: "Experience & Motion",
-		tools: [
-			{
-				name: "GSAP",
-				icon: <span className='text-[10px] font-bold'>GSAP</span>,
-			},
-			{ name: "Framer Motion", icon: <SiFramer /> },
-			{ name: "Tailwind CSS", icon: <SiTailwindcss /> },
-			{ name: "Sass", icon: <SiSass /> },
-			{ name: "Styled Components", icon: <SiStyledcomponents /> },
-			{ name: "ShadCN", icon: <SiShadcnui /> },
-		],
-	},
-	{
-		title: "Workflow, Design & Quality",
+		title: "Tools & Testing",
 		tools: [
 			{ name: "Git", icon: <SiGit /> },
 			{ name: "GitHub", icon: <SiGithub /> },
 			{ name: "Jest", icon: <SiJest /> },
+			{ name: "React Testing Library", icon: <SiTestinglibrary /> },
 			{ name: "Playwright", icon: <VscDebugAlt /> },
+			{ name: "Storybook", icon: <SiStorybook /> },
 			{ name: "Figma", icon: <SiFigma /> },
 		],
 	},
@@ -215,18 +236,32 @@ export const STACK_CATEGORIES = [
 
 export const EXPERIENCE = [
 	{
+		id: "ai-contractor",
+		company: "Independent Contractor",
+		role: "AI Model Evaluation Specialist",
+		period: "Mar 2026 — Present",
+		location: "Remote",
+		description:
+			"Evaluating and improving AI-generated code quality and model performance for large language models.",
+		details: [
+			"Authored adversarial prompts to identify AI model vulnerabilities and edge cases.",
+			"Analyzed model-generated code for correctness, efficiency, and security best practices.",
+			"Provided structured feedback to guide model fine-tuning and iterative development.",
+		],
+	},
+	{
 		id: "techinnover",
 		company: "Techinnover",
 		role: "Frontend Engineer",
 		period: "Mar 2025 — Jan 2026",
-		location: "Lagos, Nigeria (Remote) ",
+		location: "Remote",
 		description:
-			"Architected scalable frontend solutions and complex user flows for high-stakes fintech and social ecosystems. ",
+			"Architected scalable frontend solutions and complex user flows for fintech and social ecosystems.",
 		details: [
-			"Engineered a large-scale PWA with 20+ screens, bypassing native app store constraints for cross-platform accessibility. ",
-			"Developed 15+ secure user flows, including BVN verification systems that reduced fraud risk for withdrawals. ",
-			"Increased PWA adoption by 40% among iPhone users by implementing custom iOS installation prompts. ",
-			"Collaborated with stakeholders to provide technical input on product roadmaps and business decisions. ",
+			"Engineered a large-scale PWA with 20+ screens after App Store rejection, delivering cross-platform accessibility.",
+			"Developed 15+ secure user flows with BVN verification, reducing fraud risk for withdrawals.",
+			"Increased PWA adoption by 40% among iPhone users through custom iOS installation prompts.",
+			"Collaborated with cross-functional teams to shape product roadmaps and business strategy.",
 		],
 	},
 	{
@@ -234,14 +269,14 @@ export const EXPERIENCE = [
 		company: "Vinhood",
 		role: "Frontend Engineer",
 		period: "Mar 2023 — Apr 2024",
-		location: "Milan, Italy (Remote) ",
+		location: "Milan, Italy (Remote)",
 		description:
-			"Led UI standardization and performance optimization for a global wine-tech platform. ",
+			"Led UI standardization and performance optimization for a global wine-tech platform.",
 		details: [
-			"Delivered 20+ features for the V2 rollout adopted across 5+ countries with 98% responsive compliance. ",
-			"Reduced load times on key pages by 35% through systematic optimization of reusable components. ",
-			"Decreased design inconsistencies by 30% by bridging the gap between design systems and engineering. ",
-			"Participated in rigorous code reviews to uphold frontend best practices and team code quality. ",
+			"Delivered 20+ production features for V2 rollout adopted across 5+ countries with 98% responsive compliance.",
+			"Reduced load times on key pages by 35% through component optimization and API integration.",
+			"Decreased design inconsistencies by 30% through systematic UI standardization.",
+			"Participated in code reviews to uphold frontend best practices and team code quality.",
 		],
 	},
 	{
@@ -249,29 +284,14 @@ export const EXPERIENCE = [
 		company: "Hotels.ng",
 		role: "Frontend Engineer",
 		period: "Oct 2022 — Dec 2022",
-		location: "Lagos, Nigeria (Remote) ",
+		location: "Remote",
 		description:
-			"Rapidly developed and deployed live event-scheduling tools in a high-velocity team environment. ",
+			"Rapidly developed and deployed live event-scheduling features in a high-velocity team environment.",
 		details: [
-			"Translated complex wireframes into 10+ production features with 95% implementation accuracy. ",
-			"Debugged and resolved 30+ critical frontend issues, directly improving application stability. ",
-			"Collaborated within a cross-functional team of 15+ members to deploy 'Catchup.' ",
-			"Utilized Git-based version control to manage complex merges and maintain codebase integrity. ",
-		],
-	},
-	{
-		id: "fiverr",
-		company: "Freelance",
-		role: "Developer & Designer",
-		period: "Dec 2021 — Feb 2022",
-		location: "Remote ",
-		description:
-			"Delivered end-to-end digital solutions for diverse global clients, balancing technical performance with aesthetic goals. ",
-		details: [
-			"Built, debugged, and optimized custom web applications tailored to specific business requirements. ",
-			"Managed the full project lifecycle, from requirement gathering to deployment and client handoff. ",
-			"Delivered high-quality digital assets and codebases on schedule through effective project management. ",
-			"Applied version control and performance best practices to ensure project reliability and maintainability. ",
+			"Translated complex wireframes into 10+ production features with 95% design-to-implementation accuracy.",
+			"Debugged and resolved 30+ critical frontend issues, improving application stability.",
+			"Collaborated with a cross-functional team of 8 developers, 3 PMs, and 5 designers to build 'Catchup.'",
+			"Managed Git-based workflows to handle complex merges and maintain codebase integrity.",
 		],
 	},
 ];

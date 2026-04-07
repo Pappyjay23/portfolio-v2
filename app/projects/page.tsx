@@ -77,7 +77,7 @@ const Projects = () => {
 							{/* Image */}
 							<div
 								onClick={() =>
-									router.push(`/projects/${project.title.toLowerCase()}`)
+									router.push(`/projects/${project.slug}`)
 								}
 								className='group relative w-full md:w-3/5 aspect-4/3 overflow-hidden rounded-[15px] md:rounded-[25px] bg-foreground/5 cursor-pointer'>
 								<div
@@ -139,7 +139,7 @@ const Projects = () => {
 								{/* Subtle CTA */}
 								<div className='pt-4 mt-0 md:mt-4'>
 									<Link
-										href={`/projects/${project.title.toLowerCase()}`}
+										href={`/projects/${project.slug}`}
 										className='group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]'>
 										<span>View case study</span>
 										<span className='relative flex items-center'>
