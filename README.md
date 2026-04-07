@@ -1,6 +1,6 @@
 <div align="center">
   <h1> 🌌 Peace Jinadu-Paul | Portfolio </h1>
-  <p><strong>Innovative Front-End Engineer & Aesthetic Architect</strong></p>
+  <p><strong>Innovative Software Engineer & Aesthetic Architect</strong></p>
 
   <a href="https://peacejp.dev"><strong>View Live Site →</strong></a>
 </div>
