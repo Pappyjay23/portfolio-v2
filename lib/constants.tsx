@@ -62,24 +62,32 @@ export const PROJECTS = [
 		},
 	},
 	{
-		title: "Memoir Notes",
-		slug: "memoir-notes",
+		title: "ThreadX",
+		slug: "threadx",
 		description:
-			"A secure full-stack note-taking application with real-time synchronization and JWT-based authentication.",
-		category: "Note Management",
-		image: "/memoir-notes.jpg",
-		tech: ["React.js", "Node.js", "Express", "MongoDB", "Axios", "JWT"],
-		link: "https://memoirnotes.vercel.app",
-		repo: "https://github.com/Pappyjay23/memoir-notes",
+			"A real-time full-stack messaging platform featuring multi-room group architectures, live states, and advanced edge security.",
+		category: "Communication",
+		image: "/threadx.jpg",
+		tech: [
+			"React.js",
+			"Node.js",
+			"Express",
+			"Socket.IO",
+			"MongoDB",
+			"TypeScript",
+			"Tailwind CSS",
+		],
+		link: "https://threadx-vp.vercel.app",
+		repo: "https://github.com/Pappyjay23/threadx",
 		details: {
 			summary:
-				"Memoir Notes was engineered as a demonstration of full-stack architectural competency, bridging the gap between frontend state management and backend data persistence. The project addresses the fundamental challenge of building a secure, scalable note-taking system where user authentication, CRUD operations, and real-time data synchronization must work seamlessly across distributed environments. It serves as a technical proof-of-concept for end-to-end application development—from database schema design to production deployment.",
+				"Threadx was engineered to address the complexities of real-time state synchronization, low-latency communication, and advanced application security in a full-stack environment. Built on the bleeding edge of the ecosystem using React 19 and Express 5, the platform transitions away from traditional pull-based architectures into an event-driven model that processes messaging, group state transitions, and typing metadata concurrently without introducing client-side performance degradation.",
 			whatWasBuilt:
-				"I architected a complete full-stack application featuring a RESTful API backend built with Node.js and Express, paired with a React frontend utilizing Axios for efficient HTTP communication. The system implements JWT-based authentication with refresh token rotation for enhanced security, modular Express controllers for clean separation of concerns, and MongoDB for flexible document-based data storage. Key features include secure CRUD operations with protected routes, optimized data fetching with client-side state management, and persistent user sessions managed through HTTP-only cookies.",
+				"I architected an event-driven ecosystem featuring a dedicated Socket.io layer for real-time bi-directional communication, complete with multi-room group management and granular administrative controls. The system features a custom optimistic UI strategy to guarantee instant visual feedback on message dispatches, dual-layer authentication merging JWT mechanisms with Google OAuth, and an edge-security infrastructure powered by Arcjet to enforce robust rate-limiting, bot protection, and request validation.",
 			theApproach:
-				"My engineering philosophy centered on building a production-grade architecture that balances security, performance, and maintainability. On the backend, I structured the Express API using a modular controller-service pattern with custom middleware for authentication and error handling. For the frontend, I implemented a clean component architecture with React's built-in state management, keeping the application lightweight while maintaining full reactivity. The authentication layer implements industry-standard practices: access tokens for API authorization and refresh tokens for session persistence, with automatic token rotation to mitigate security risks.",
+				"My engineering philosophy centered on low-latency state consistency and modern defensive design. By pairing React 19's asynchronous capabilities with Express 5's upgraded router, I streamlined asynchronous middleware execution on the backend. Real-time updates were decoupled from primary database writes; the UI updates instantly while the Socket layer broadcasts events asynchronously, and the backend handles non-blocking persistence to MongoDB, ensuring fluid, uninterrupted user interactions.",
 			theResult:
-				"The final product is a fully deployed, production-ready application that demonstrates a comprehensive understanding of modern full-stack development. By successfully integrating a Node.js backend with a React frontend and deploying them independently—backend on Railway, frontend on Vercel—Memoir Notes showcases my ability to architect, build, and ship complete web applications. The project stands as tangible evidence of my capability to handle both client-side and server-side development, manage complex data flows, and implement secure authentication systems from scratch.",
+				"The final product is a highly secure, responsive communication engine that demonstrates complete full-stack architectural mastery. By implementing production-grade components like live typing indicators, nested message replies, and defensive edge guards via Arcjet, Threadx stands as a powerful testament to my capability to architect, secure, and maintain complex real-time applications that remain fast and resilient under high load.",
 		},
 	},
 	{
