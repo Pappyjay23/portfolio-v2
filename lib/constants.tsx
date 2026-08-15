@@ -244,17 +244,19 @@ export const STACK_CATEGORIES = [
 
 export const EXPERIENCE = [
 	{
-		id: "ai-contractor",
-		company: "Independent Contractor",
-		role: "AI Model Evaluation Specialist",
-		period: "Mar 2026 — Present",
-		location: "Remote",
+		id: "feenx",
+		company: "FeenX",
+		role: "Senior Software Engineer",
+		period: "Jun 2026 — Present",
+		location: "Remote | Cincinnati, Ohio, USA",
 		description:
-			"Evaluating and improving AI-generated code quality and model performance for large language models.",
+			"Leading frontend development across web and mobile products while contributing to technical direction, product planning, and end-to-end feature delivery.",
 		details: [
-			"Authored adversarial prompts to identify AI model vulnerabilities and edge cases.",
-			"Analyzed model-generated code for correctness, efficiency, and security best practices.",
-			"Provided structured feedback to guide model fine-tuning and iterative development.",
+			"Build production features across web and mobile using React, React Native, and TypeScript, while designing reusable components and workflows that support scalable frontend architecture.",
+			"Contribute to product planning and technical decision-making, helping shape feature requirements, user workflows, and technical direction across the development lifecycle.",
+			"Build and integrate features using GraphQL and Relay, handling data fetching, mutations, and frontend-backend communication while contributing to backend development when needed.",
+			"Improve product reliability through test-driven development, automated mobile testing with Maestro, and API quality assurance using Bruno.",
+			"Mentor junior developers through regular code and pull request reviews, providing technical feedback and helping uphold code quality standards.",
 		],
 	},
 	{
@@ -264,12 +266,13 @@ export const EXPERIENCE = [
 		period: "Mar 2025 — Jan 2026",
 		location: "Remote",
 		description:
-			"Architected scalable frontend solutions and complex user flows for fintech and social ecosystems.",
+			"Owned frontend architecture across multiple production products, contributing to Lohli from beta and launch through early growth to 1,000+ active users.",
 		details: [
-			"Engineered a large-scale PWA with 20+ screens after App Store rejection, delivering cross-platform accessibility.",
-			"Developed 15+ secure user flows with BVN verification, reducing fraud risk for withdrawals.",
-			"Increased PWA adoption by 40% among iPhone users through custom iOS installation prompts.",
-			"Collaborated with cross-functional teams to shape product roadmaps and business strategy.",
+			"Worked across five production web products, with primary frontend ownership of the Lohli PWA while also contributing to its advertiser platform, admin portal, and Filmhouse's web and administrative products.",
+			"Built and evolved the Lohli PWA with Next.js and TypeScript, implementing authentication, state management, API integration, geolocation-based ad targeting with automatic location updates, and complex user and transaction flows.",
+			"Maintained and refactored React applications across advertiser and admin platforms, improving analytics and operational workflows.",
+			"Redesigned the Lohli admin platform to give support teams direct control over accounts, funding, bans, transactions, and other operational functions, eliminating the need for developer intervention in those support workflows.",
+			"Supported Filmhouse's web and administrative products while collaborating with backend engineers, QA, stakeholders, and cross-functional teams to address reliability challenges and contribute technical input to product roadmaps and business decisions.",
 		],
 	},
 	{
@@ -277,14 +280,14 @@ export const EXPERIENCE = [
 		company: "Vinhood",
 		role: "Frontend Engineer",
 		period: "Mar 2023 — Apr 2024",
-		location: "Milan, Italy (Remote)",
+		location: "Remote | Milan, Italy",
 		description:
-			"Led UI standardization and performance optimization for a global wine-tech platform.",
+			"Built scalable frontend experiences for a global consumer product, with a focus on feature delivery, performance, reusable component architecture, and design system consistency.",
 		details: [
-			"Delivered 20+ production features for V2 rollout adopted across 5+ countries with 98% responsive compliance.",
-			"Reduced load times on key pages by 35% through component optimization and API integration.",
-			"Decreased design inconsistencies by 30% through systematic UI standardization.",
-			"Participated in code reviews to uphold frontend best practices and team code quality.",
+			"Delivered 20+ production features using React.js for a product rollout adopted across 5+ countries.",
+			"Integrated frontend components with backend APIs and reduced load times on key pages by 35% across devices and browsers.",
+			"Designed and maintained scalable component structures using Storybook to develop, document, and optimize reusable UI components while following test-driven development workflows.",
+			"Collaborated with designers and developers to establish a new design system and redesign core product experiences, reducing UI inconsistencies by 30% and contributing to improved code quality through code reviews and cross-functional development.",
 		],
 	},
 	{
@@ -294,12 +297,11 @@ export const EXPERIENCE = [
 		period: "Oct 2022 — Dec 2022",
 		location: "Remote",
 		description:
-			"Rapidly developed and deployed live event-scheduling features in a high-velocity team environment.",
+			"Contributed to the development of Catchup, a live event-scheduling web application, delivering production features and improving application stability within a fast-paced cross-functional team.",
 		details: [
-			"Translated complex wireframes into 10+ production features with 95% design-to-implementation accuracy.",
-			"Debugged and resolved 30+ critical frontend issues, improving application stability.",
-			"Collaborated with a cross-functional team of 8 developers, 3 PMs, and 5 designers to build 'Catchup.'",
-			"Managed Git-based workflows to handle complex merges and maintain codebase integrity.",
+			"Engineered 10+ production features using React.js, translating complex designs into high-performance components with 95% design-to-implementation accuracy.",
+			"Diagnosed and resolved 30+ critical frontend issues, improving application stability, core page-load performance, and end-to-end user experience.",
+			"Collaborated across a 16+ member cross-functional team of developers, designers, project managers, and backend engineers to streamline delivery and maintain codebase integrity through Git workflows.",
 		],
 	},
 ];
