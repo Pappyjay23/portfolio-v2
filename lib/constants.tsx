@@ -319,7 +319,7 @@ export const SOCIAL_LINKS = [
 	},
 	{
 		name: "Twitter",
-		url: "https://x.com/_pappy_jay_",
+		url: "https://x.com/simply_pjp",
 		icon: <FaXTwitter />,
 	},
 ];
